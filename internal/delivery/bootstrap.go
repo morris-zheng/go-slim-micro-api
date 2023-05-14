@@ -50,10 +50,6 @@ func (s *HttpServer) Register(svc *domain.ServiceContext) {
 
 	userGroup := s.engine.Group("/user")
 	{
-		//userGroup.GET("", userHandler.Query)
 		userGroup.GET("/:id", userHandler.Get)
-		//userGroup.POST("", userHandler.Create)
-		//userGroup.PUT("/:id", userHandler.Update)
-		//userGroup.DELETE("/:id", userHandler.Delete)
 	}
 }
